@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Functions</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <div class="student-details__section">
+      <h2>Student Table</h2>
+
+      <div class="student-input__section">
+        <label for="sortDropdown">Sort by:</label>
+        <select class="dropDown" id="sortDropdown" onchange="sortTable()">
+          <option value="sort">Sort by</option>
+          <option value="name">Name</option>
+          <option value="age">Age</option>
+          <option value="admission">Admission Number</option>
+          <option value="totalMarks">Total Marks</option>
+        </select>
+        <label for="searchInput">Search:</label>
+        <input
+          type="text"
+          class="inputField"
+          id="searchInput"
+          placeholder="Type to search"
+        />
+        <button class="button" onclick="searchTable()">Search</button>
+
+        <label for="filterInput">Filter:</label>
+        <input
+          type="number"
+          class="inputField"
+          id="filterInput"
+          placeholder="Enter marks"
+        />
+        <button class="button" onclick="filterMarks()">Filter</button>
+      </div>
+      <div class="student-table__section">
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Admission Number</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Department</th>
+              <th>Total Marks</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="assets/js/script.js" />
+  </body>
+</html>
